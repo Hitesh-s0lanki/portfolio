@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import shinchan from '../Image/shinchan.png'
 import Typed from 'typed.js';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -29,22 +30,22 @@ const Home = () => {
           <h2>and I am a passionate</h2>
           <span ref={el} style={{fontSize:"30px"}} />
           <section className='my-3 d-flex' style={{color:"white",fontSize:"30px"}}>
-            <i className="fa-brands fa-instagram mx-2"
+          <Link className="nav-link"  to="https://github.com/Hitesh-s0lanki" ><i className="fa-brands fa-instagram mx-2"
             onMouseOver={handleHover}
             onMouseOut={handleHoverOut}
-            style={{cursor:"pointer"}}></i>
-            <i className="fa-brands fa-linkedin mx-2"
+            style={{cursor:"pointer"}}></i></Link>
+            <Link className="nav-link"  to="https://www.linkedin.com/in/hitesh-solanki-594436258" ><i className="fa-brands fa-linkedin mx-2"
             onMouseOver={handleHover}
             onMouseOut={handleHoverOut}
-            style={{cursor:"pointer"}}></i>
-            <i className="fa-brands fa-github mx-2"
+            style={{cursor:"pointer"}}></i></Link>
+            <Link className="nav-link"  to="https://github.com/Hitesh-s0lanki" ><i className="fa-brands fa-github mx-2"
             onMouseOver={handleHover}
             onMouseOut={handleHoverOut}
-            style={{cursor:"pointer"}}></i>
-            <i className="fa-brands fa-whatsapp mx-2"
+            style={{cursor:"pointer"}}></i></Link>
+            <Link className="nav-link"  to="https://github.com/Hitesh-s0lanki" ><i className="fa-brands fa-whatsapp mx-2"
             onMouseOver={handleHover}
             onMouseOut={handleHoverOut}
-            style={{cursor:"pointer"}}></i>
+            style={{cursor:"pointer"}}></i></Link>
         </section>
         <button type="button" className="btn btn-outline-info my-2">Download CV</button>
         </section>
