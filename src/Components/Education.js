@@ -13,7 +13,7 @@ const Education = () => {
             <img src={chess} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title" style={{color:"#04b4e0"}} >Chess Game</h5>
-              <a href="/" className="btn btn-primary">Visit</a>
+              <a href="https://chess-project.vercel.app/" className="btn btn-primary">Visit</a>
             </div>
           </div>
           <div className="card mx-3" style={{width: "18rem",background:'transparent'}}>
