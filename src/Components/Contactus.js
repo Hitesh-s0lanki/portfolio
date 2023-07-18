@@ -1,10 +1,28 @@
 import React, { useState } from 'react'
 
 const Contactus = () => {
-    const [info,setInfo] = useState({UserName:"",email:"",number:"",subject:"",message:""})
-    const handleSubmit = (e) =>{
+    const [info,setInfo] = useState({UserName:"",email:"",number:0,subject:"",message:""})
+    const handleSubmit = async (e) =>{
         e.preventDefault();
-        setInfo({UserName:"",email:"",number:"+91",subject:"",message:""})
+        const {UserName,email,number,subject,message} = info
+        try{
+            if(UserName && email && number && subject && message){
+                const response = await fetch('https://profolioapi.onrender.com/api/contact',{
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json'
+                    },
+                    body:JSON.stringify(info)
+                })
+                const json = await response.json()
+                console.log(json)
+            }else{
+                alert("fill the details")
+            }
+        }catch(err){
+            console.log(err.message)
+        }
+        setInfo({UserName:"",email:"",number:0,subject:"",message:""})
     }
     const onChange = (e) =>{
         setInfo({...info,[e.target.name] : e.target.value})
