@@ -41,11 +41,12 @@ const Skills = () => {
               <div className="cpp flex-column" style={{width:'400px'}}>
                 <span class="badge mx-2 my-2" style={{background:"#04b4e0",height:'30px',fontSize:'17px',color:'black',textAlign:'center'}}>React</span>
                 <span class="badge mx-2 my-2" style={{background:"#04b4e0",height:'30px',fontSize:'17px',color:'black',textAlign:'center'}}>Nodejs</span>
-                <span class="badge mx-2 my-2" style={{background:"#04b4e0",height:'30px',fontSize:'17px',color:'black',textAlign:'center'}}>MongoDB</span>
+                <span class="badge mx-2 my-2" style={{background:"#04b4e0",height:'30px',fontSize:'17px',color:'black',textAlign:'center'}}>MERN Stack</span>
                 <span class="badge mx-2 my-2" style={{background:"#04b4e0",height:'30px',fontSize:'17px',color:'black',textAlign:'center'}}>Firebase</span>
                 <span class="badge mx-2 my-2" style={{background:"#04b4e0",height:'30px',fontSize:'17px',color:'black',textAlign:'center'}}>MySql</span>
                 <span class="badge mx-2 my-2" style={{background:"#04b4e0",height:'30px',fontSize:'17px',color:'black',textAlign:'center'}}>DSA</span>
                 <span class="badge mx-2 my-2" style={{background:"#04b4e0",height:'30px',fontSize:'17px',color:'black',textAlign:'center'}}>Python</span>
+                <span class="badge mx-2 my-2" style={{background:"#04b4e0",height:'30px',fontSize:'17px',color:'black',textAlign:'center'}}>Android</span>
               </div>
           </section>
         </div>
