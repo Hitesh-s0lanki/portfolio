@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useToast,Box } from '@chakra-ui/react'
 
 const Contactus = () => {
     const [info,setInfo] = useState({UserName:"",email:"",number:0,subject:"",message:""})
+    const toast = useToast()
     const handleSubmit = async (e) =>{
         e.preventDefault();
         const {UserName,email,number,subject,message} = info
@@ -16,13 +18,21 @@ const Contactus = () => {
                 })
                 const json = await response.json()
                 console.log(json)
+                setInfo({UserName:"",email:"",number:0,subject:"",message:""})
+                toast({
+                    position: 'bottom-right',
+                    render: () => (
+                      <Box color='white' p={3} bg='#04b4e0'>
+                        Succefully Send
+                      </Box>
+                    ),
+                  })
             }else{
                 alert("fill the details")
             }
         }catch(err){
             console.log(err.message)
         }
-        setInfo({UserName:"",email:"",number:0,subject:"",message:""})
     }
     const onChange = (e) =>{
         setInfo({...info,[e.target.name] : e.target.value})
@@ -47,9 +57,8 @@ const Contactus = () => {
             </div>
         </div>
 
-        <button type="submit" class="btn  btn-lg p-2" style={{background:"#04b4e0" ,fontWeight:"500",margin:"30px"}}>Submit</button>
+        <button type="submit" className="btn  btn-lg p-2" style={{background:"#04b4e0" ,fontWeight:"500",margin:"30px"}}>Submit</button>
         </form>
-
     </div>
   )
 }
